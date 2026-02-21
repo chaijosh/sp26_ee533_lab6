@@ -1,0 +1,5 @@
+verilog work "instr_mem_dp.v"
+verilog work "data_mem_64_256.v"
+verilog work "cpu_behavioural.v"
+verilog work "cpu_tb1.v"
+verilog work "C:/Xilinx/10.1/ISE/verilog/src/glbl.v"

@@ -1,0 +1,32 @@
+Determining compilation order of HDL files
+Analyzing Verilog file instr_mem_dp.v
+Analyzing Verilog file data_mem_64_256.v
+Analyzing Verilog file cpu_behavioural.v
+Analyzing Verilog file cpu_tb1.v
+Analyzing Verilog file C:/Xilinx/10.1/ISE/verilog/src/glbl.v
+Saving Verilog parse-tree work.instr_mem_dp into
+z:/ee533/lab6_github/isim/work/instr_mem_dp.sdb
+Saving Verilog parse-tree work.data_mem_64_256 into
+z:/ee533/lab6_github/isim/work/data_mem_64_256.sdb
+Saving Verilog parse-tree work.cpu_behavioural into
+z:/ee533/lab6_github/isim/work/cpu_behavioural.sdb
+Saving Verilog parse-tree work.cpu_tb1 into
+z:/ee533/lab6_github/isim/work/cpu_tb1.sdb
+Saving Verilog parse-tree work.glbl into z:/ee533/lab6_github/isim/work/glbl.sdb
+Starting static elaboration
+Restoring Verilog parse-tree xilinxcorelib_ver.BLKMEMDP_V6_3 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/xilinxcorelib_ver/xilinxcorelib_ver.sdbl
+Completed static elaboration
+Fuse Memory Usage: 55176 Kb
+Fuse CPU Usage: 187 ms
+Compiling module glbl
+Compiling module BLKMEMDP_V6_3(c_addra_width=9,c_...
+Compiling module instr_mem_dp
+Compiling module BLKMEMDP_V6_3(c_addra_width=8,c_...
+Compiling module data_mem_64_256
+Compiling module cpu_behavioural
+Compiling module cpu_tb1
+Compiled 7 Verilog Units
+Built simulation executable cpu_tb1_isim_beh.exe
+Fuse Memory Usage: 58764 Kb
+Fuse CPU Usage: 452 ms

@@ -1,0 +1,12 @@
+# Output products list for <data_mem_64_256>
+data_mem_64_256.asy
+data_mem_64_256.mif
+data_mem_64_256.ngc
+data_mem_64_256.sym
+data_mem_64_256.v
+data_mem_64_256.veo
+data_mem_64_256.vhd
+data_mem_64_256.vho
+data_mem_64_256.xco
+data_mem_64_256_flist.txt
+data_mem_64_256_xmdf.tcl

@@ -1,0 +1,12 @@
+# Output products list for <instr_mem_dp>
+instr_mem_dp.asy
+instr_mem_dp.mif
+instr_mem_dp.ngc
+instr_mem_dp.sym
+instr_mem_dp.v
+instr_mem_dp.veo
+instr_mem_dp.vhd
+instr_mem_dp.vho
+instr_mem_dp.xco
+instr_mem_dp_flist.txt
+instr_mem_dp_xmdf.tcl

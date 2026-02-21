@@ -1,0 +1,5 @@
+verilog isim_temp "instr_mem_dp.v"
+verilog isim_temp "data_mem_64_256.v"
+verilog isim_temp "cpu_behavioural.v"
+verilog isim_temp "cpu_tb1.v"
+verilog isim_temp "C:/Xilinx/10.1/ISE/verilog/src/glbl.v"
