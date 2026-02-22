@@ -42,8 +42,8 @@ Library XilinxCoreLib;
 -- synthesis translate_on
 ENTITY instr_mem_dp IS
 	port (
-	addra: IN std_logic_VECTOR(8 downto 0);
-	addrb: IN std_logic_VECTOR(8 downto 0);
+	addra: IN std_logic_VECTOR(10 downto 0);
+	addrb: IN std_logic_VECTOR(10 downto 0);
 	clka: IN std_logic;
 	clkb: IN std_logic;
 	dinb: IN std_logic_VECTOR(31 downto 0);
@@ -58,8 +58,8 @@ ARCHITECTURE instr_mem_dp_a OF instr_mem_dp IS
 -- synthesis translate_off
 component wrapped_instr_mem_dp
 	port (
-	addra: IN std_logic_VECTOR(8 downto 0);
-	addrb: IN std_logic_VECTOR(8 downto 0);
+	addra: IN std_logic_VECTOR(10 downto 0);
+	addrb: IN std_logic_VECTOR(10 downto 0);
 	clka: IN std_logic;
 	clkb: IN std_logic;
 	dinb: IN std_logic_VECTOR(31 downto 0);
@@ -96,8 +96,8 @@ end component;
 			c_has_rdyb => 0,
 			c_yuse_single_primitive => 0,
 			c_has_rdya => 0,
-			c_addra_width => 9,
-			c_addrb_width => 9,
+			c_addra_width => 11,
+			c_addrb_width => 11,
 			c_has_limit_data_pitch => 0,
 			c_default_data => "0",
 			c_pipe_stages_b => 0,
@@ -120,8 +120,8 @@ end component;
 			c_has_enb => 1,
 			c_has_ena => 1,
 			c_mem_init_file => "instr_mem_dp.mif",
-			c_depth_b => 512,
-			c_depth_a => 512,
+			c_depth_b => 2048,
+			c_depth_a => 2048,
 			c_has_doutb => 1,
 			c_has_douta => 1,
 			c_yprimitive_type => "16kx1");

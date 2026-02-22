@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLCompilers" num="26" delta="unknown" >&quot;<arg fmt="%s" index="1">cpu_with_ALU.v</arg>&quot; line <arg fmt="%d" index="2">273</arg> <arg fmt="%s" index="3">unexpected token: &apos;alu_64&apos;</arg>
+</msg>
+
+<msg type="error" file="HDLCompilers" num="26" delta="unknown" >&quot;<arg fmt="%s" index="1">cpu_with_ALU.v</arg>&quot; line <arg fmt="%d" index="2">274</arg> <arg fmt="%s" index="3">unexpected token: &apos;.&apos;</arg>
+</msg>
+
+<msg type="error" file="HDLCompilers" num="26" delta="unknown" >&quot;<arg fmt="%s" index="1">cpu_with_ALU.v</arg>&quot; line <arg fmt="%d" index="2">274</arg> <arg fmt="%s" index="3">expecting &apos;;&apos;, found &apos;,&apos;</arg>
+</msg>
+
+<msg type="error" file="HDLCompilers" num="26" delta="unknown" >&quot;<arg fmt="%s" index="1">cpu_with_ALU.v</arg>&quot; line <arg fmt="%d" index="2">275</arg> <arg fmt="%s" index="3">expecting &apos;;&apos;, found &apos;,&apos;</arg>
+</msg>
+
+<msg type="error" file="HDLCompilers" num="26" delta="unknown" >&quot;<arg fmt="%s" index="1">cpu_with_ALU.v</arg>&quot; line <arg fmt="%d" index="2">276</arg> <arg fmt="%s" index="3">expecting &apos;;&apos;, found &apos;,&apos;</arg>
+</msg>
+
+<msg type="error" file="HDLCompilers" num="26" delta="unknown" >&quot;<arg fmt="%s" index="1">cpu_with_ALU.v</arg>&quot; line <arg fmt="%d" index="2">277</arg> <arg fmt="%s" index="3">expecting &apos;;&apos;, found &apos;,&apos;</arg>
+</msg>
+
+<msg type="error" file="HDLCompilers" num="26" delta="unknown" >&quot;<arg fmt="%s" index="1">cpu_with_ALU.v</arg>&quot; line <arg fmt="%d" index="2">279</arg> <arg fmt="%s" index="3">expecting &apos;;&apos;, found &apos;,&apos;</arg>
+</msg>
+
+<msg type="error" file="HDLCompilers" num="26" delta="unknown" >&quot;<arg fmt="%s" index="1">cpu_with_ALU.v</arg>&quot; line <arg fmt="%d" index="2">280</arg> <arg fmt="%s" index="3">expecting &apos;;&apos;, found &apos;,&apos;</arg>
+</msg>
+
+<msg type="error" file="HDLCompilers" num="26" delta="unknown" >&quot;<arg fmt="%s" index="1">cpu_with_ALU.v</arg>&quot; line <arg fmt="%d" index="2">281</arg> <arg fmt="%s" index="3">expecting &apos;;&apos;, found &apos;,&apos;</arg>
+</msg>
+
+<msg type="error" file="HDLCompilers" num="26" delta="unknown" >&quot;<arg fmt="%s" index="1">cpu_with_ALU.v</arg>&quot; line <arg fmt="%d" index="2">282</arg> <arg fmt="%s" index="3">expecting &apos;;&apos;, found &apos;,&apos;</arg>
+</msg>
+
+<msg type="error" file="HDLCompilers" num="26" delta="unknown" >&quot;<arg fmt="%s" index="1">cpu_with_ALU.v</arg>&quot; line <arg fmt="%d" index="2">284</arg> <arg fmt="%s" index="3">expecting &apos;;&apos;, found &apos;)&apos;</arg>
+</msg>
+
+</messages>
+

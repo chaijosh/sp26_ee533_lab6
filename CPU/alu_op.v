@@ -11,9 +11,9 @@
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: C:\Xilinx\10.1\ISE\bin\nt\unwrapped\sch2verilog.exe -intstyle ise -family aspartan2e -w Z:/VM_Share/533_lab5/alu_64/alu_op.sch alu_op.vf
+//Command: C:\Xilinx\10.1\ISE\bin\nt\unwrapped\sch2verilog.exe -intstyle ise -family virtex2p -w Z:/VM_Share/533_lab5/alu_64/alu_op.sch alu_op.vf
 //Design Name: alu_op
-//Device: aspartan2e
+//Device: virtex2p
 //Purpose:
 //    This verilog netlist is translated from an ECS schematic.It can be 
 //    synthesized and simulated, but it should not be modified. 

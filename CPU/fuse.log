@@ -1,32 +1,156 @@
 Determining compilation order of HDL files
+Analyzing Verilog file xor_8_1.v
+Analyzing Verilog file mux_8b.v
+Analyzing Verilog file xor_32_1.v
+Analyzing Verilog file mux32b.v
+Analyzing Verilog file alu_1b.v
+Analyzing Verilog file zero.v
+Analyzing Verilog file xor_64_1.v
+Analyzing Verilog file shifter.v
+Analyzing Verilog file mux64b.v
+Analyzing Verilog file byte_comp_mask.v
+Analyzing Verilog file bool_setter_64.v
+Analyzing Verilog file alu_op.v
+Analyzing Verilog file alu_8_overflow.v
+Analyzing Verilog file alu_8.v
+Analyzing Verilog file sign_extend.v
 Analyzing Verilog file instr_mem_dp.v
 Analyzing Verilog file data_mem_64_256.v
-Analyzing Verilog file cpu_behavioural.v
-Analyzing Verilog file cpu_tb1.v
+Analyzing Verilog file control_unit.v
+Analyzing Verilog file alu_control.v
+Analyzing Verilog file alu_64.v
+Analyzing Verilog file cpu_CMT.v
+Analyzing Verilog file cmt_test1.v
 Analyzing Verilog file C:/Xilinx/10.1/ISE/verilog/src/glbl.v
+Saving Verilog parse-tree work.xor_8_1 into
+z:/ee533/lab6_sp26/verilog/isim/work/xor_8_1.sdb
+Saving Verilog parse-tree work.mux_8b into
+z:/ee533/lab6_sp26/verilog/isim/work/mux_8b.sdb
+Saving Verilog parse-tree work.xor_32_1 into
+z:/ee533/lab6_sp26/verilog/isim/work/xor_32_1.sdb
+Saving Verilog parse-tree work.mux32b into
+z:/ee533/lab6_sp26/verilog/isim/work/mux32b.sdb
+Saving Verilog parse-tree work.alu_1b into
+z:/ee533/lab6_sp26/verilog/isim/work/alu_1b.sdb
+Saving Verilog parse-tree work.zero into
+z:/ee533/lab6_sp26/verilog/isim/work/zero.sdb
+Saving Verilog parse-tree work.xor_64_1 into
+z:/ee533/lab6_sp26/verilog/isim/work/xor_64_1.sdb
+Saving Verilog parse-tree work.shifter into
+z:/ee533/lab6_sp26/verilog/isim/work/shifter.sdb
+Saving Verilog parse-tree work.mux64b into
+z:/ee533/lab6_sp26/verilog/isim/work/mux64b.sdb
+Saving Verilog parse-tree work.AND8_MXILINX_byte_comp_mask into
+z:/ee533/lab6_sp26/verilog/isim/work/@a@n@d8_@m@x@i@l@i@n@x_byte_comp_mask.sdb
+Saving Verilog parse-tree work.byte_comp_mask into
+z:/ee533/lab6_sp26/verilog/isim/work/byte_comp_mask.sdb
+Saving Verilog parse-tree work.bool_setter into
+z:/ee533/lab6_sp26/verilog/isim/work/bool_setter.sdb
+Saving Verilog parse-tree work.alu_op into
+z:/ee533/lab6_sp26/verilog/isim/work/alu_op.sdb
+Saving Verilog parse-tree work.alu_8_overflow into
+z:/ee533/lab6_sp26/verilog/isim/work/alu_8_overflow.sdb
+Saving Verilog parse-tree work.alu_8 into
+z:/ee533/lab6_sp26/verilog/isim/work/alu_8.sdb
+Saving Verilog parse-tree work.sign_extend into
+z:/ee533/lab6_sp26/verilog/isim/work/sign_extend.sdb
 Saving Verilog parse-tree work.instr_mem_dp into
-z:/ee533/lab6_github/isim/work/instr_mem_dp.sdb
+z:/ee533/lab6_sp26/verilog/isim/work/instr_mem_dp.sdb
 Saving Verilog parse-tree work.data_mem_64_256 into
-z:/ee533/lab6_github/isim/work/data_mem_64_256.sdb
-Saving Verilog parse-tree work.cpu_behavioural into
-z:/ee533/lab6_github/isim/work/cpu_behavioural.sdb
-Saving Verilog parse-tree work.cpu_tb1 into
-z:/ee533/lab6_github/isim/work/cpu_tb1.sdb
-Saving Verilog parse-tree work.glbl into z:/ee533/lab6_github/isim/work/glbl.sdb
+z:/ee533/lab6_sp26/verilog/isim/work/data_mem_64_256.sdb
+Saving Verilog parse-tree work.control_unit into
+z:/ee533/lab6_sp26/verilog/isim/work/control_unit.sdb
+Saving Verilog parse-tree work.alu_control into
+z:/ee533/lab6_sp26/verilog/isim/work/alu_control.sdb
+Saving Verilog parse-tree work.AND8_MXILINX_alu_64 into
+z:/ee533/lab6_sp26/verilog/isim/work/@a@n@d8_@m@x@i@l@i@n@x_alu_64.sdb
+Saving Verilog parse-tree work.alu_64 into
+z:/ee533/lab6_sp26/verilog/isim/work/alu_64.sdb
+Saving Verilog parse-tree work.cpu_CMT into
+z:/ee533/lab6_sp26/verilog/isim/work/cpu_@c@m@t.sdb
+Saving Verilog parse-tree work.cmt_test1 into
+z:/ee533/lab6_sp26/verilog/isim/work/cmt_test1.sdb
+Saving Verilog parse-tree work.glbl into
+z:/ee533/lab6_sp26/verilog/isim/work/glbl.sdb
 Starting static elaboration
 Restoring Verilog parse-tree xilinxcorelib_ver.BLKMEMDP_V6_3 from
 c:/xilinx/10.1/ise/verilog/hdp/nt/xilinxcorelib_ver/xilinxcorelib_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.AND2 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.XOR2 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.OR3 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.INV from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.OR2 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.MUXF5 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.AND3B1 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.AND4B3 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.AND4B2 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.GND from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.AND3B2 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.FMAP from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.AND4 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.OR2B1 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.AND2B1 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
 Completed static elaboration
 Fuse Memory Usage: 55176 Kb
-Fuse CPU Usage: 187 ms
+Fuse CPU Usage: 671 ms
 Compiling module glbl
-Compiling module BLKMEMDP_V6_3(c_addra_width=9,c_...
+Compiling module BLKMEMDP_V6_3(c_addra_width=11,c...
 Compiling module instr_mem_dp
 Compiling module BLKMEMDP_V6_3(c_addra_width=8,c_...
 Compiling module data_mem_64_256
-Compiling module cpu_behavioural
-Compiling module cpu_tb1
-Compiled 7 Verilog Units
-Built simulation executable cpu_tb1_isim_beh.exe
-Fuse Memory Usage: 58764 Kb
-Fuse CPU Usage: 452 ms
+Compiling module control_unit
+Compiling module alu_control
+Compiling module sign_extend
+Compiling module AND2
+Compiling module XOR2
+Compiling module OR3
+Compiling module INV
+Compiling module OR2
+Compiling module alu_1b
+Compiling module alu_8
+Compiling module MUXF5
+Compiling module mux_8b
+Compiling module mux32b
+Compiling module mux64b
+Compiling module xor_8_1
+Compiling module xor_32_1
+Compiling module xor_64_1
+Compiling module shifter
+Compiling module AND3B1
+Compiling module AND4B3
+Compiling module AND4B2
+Compiling module GND
+Compiling module AND3B2
+Compiling module alu_op
+Compiling module FMAP
+Compiling module AND4
+Compiling module AND8_MXILINX_byte_comp_mask
+Compiling module OR2B1
+Compiling module byte_comp_mask
+Compiling module AND8_MXILINX_alu_64
+Compiling module alu_8_overflow
+Compiling module zero
+Compiling module bool_setter
+Compiling module AND2B1
+Compiling module alu_64
+Compiling module cpu_CMT
+Compiling module cmt_test1
+Compiled 42 Verilog Units
+Built simulation executable cmt_test1_isim_beh.exe
+Fuse Memory Usage: 59788 Kb
+Fuse CPU Usage: 1405 ms

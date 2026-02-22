@@ -1,0 +1,15 @@
+[Inputs]
+=A[63:0]=
+=ALUOp[3:0]=
+=B[63:0]=
+=byte_select[7:0]=
+=ShiftA[6:0]=
+=ShiftB[6:0]=
+[Outputs]
+Overflow
+Z
+=O[63:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel alu_64
+

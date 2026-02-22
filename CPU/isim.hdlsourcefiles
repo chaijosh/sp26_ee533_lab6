@@ -1,4 +1,17 @@
 C:/Xilinx/10.1/ISE/verilog/src/glbl.v
+//vmware-host/Shared Folders/EE533/lab6_sp26/verilog/bool_setter_64.v
+//vmware-host/Shared Folders/EE533/lab6_sp26/verilog/zero.v
+//vmware-host/Shared Folders/EE533/lab6_sp26/verilog/alu_8_overflow.v
+//vmware-host/Shared Folders/EE533/lab6_sp26/verilog/byte_comp_mask.v
+N:/K.31/rtf/verilog/src/unisims/GND.v
+//vmware-host/Shared Folders/EE533/lab6_sp26/verilog/alu_op.v
+//vmware-host/Shared Folders/EE533/lab6_sp26/verilog/shifter.v
+N:/K.31/rtf/verilog/src/unisims/MUXF5.v
+//vmware-host/Shared Folders/EE533/lab6_sp26/verilog/alu_1b.v
+//vmware-host/Shared Folders/EE533/lab6_sp26/verilog/alu_64.v
+//vmware-host/Shared Folders/EE533/lab6_sp26/verilog/sign_extend.v
+//vmware-host/Shared Folders/EE533/lab6_sp26/verilog/alu_control.v
+//vmware-host/Shared Folders/EE533/lab6_sp26/verilog/control_unit.v
 K:/IP0_K.14/env/Databases/ip/export/rtf/verilog/src/XilinxCoreLib/BLKMEMDP_V6_3.v
-//vmware-host/Shared Folders/EE533/lab6_github/cpu_behavioural.v
-//vmware-host/Shared Folders/EE533/lab6_github/cpu_tb1.v
+//vmware-host/Shared Folders/EE533/lab6_sp26/verilog/cpu_CMT.v
+//vmware-host/Shared Folders/EE533/lab6_sp26/verilog/cmt_test1.v

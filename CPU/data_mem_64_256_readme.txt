@@ -1,5 +1,5 @@
 The following files were generated for 'data_mem_64_256' in directory 
-Z:\EE533\lab6_github:
+Z:\EE533\lab6_sp26\verilog:
 
 data_mem_64_256.asy:
    Graphical symbol information file. Used by the ISE tools and some

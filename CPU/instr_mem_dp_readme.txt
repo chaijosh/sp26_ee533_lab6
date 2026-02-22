@@ -1,5 +1,5 @@
 The following files were generated for 'instr_mem_dp' in directory 
-Z:\EE533\lab6_github:
+Z:\EE533\lab6_sp26\verilog:
 
 instr_mem_dp.asy:
    Graphical symbol information file. Used by the ISE tools and some

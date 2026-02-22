@@ -5,7 +5,7 @@ SymbolType BLOCK
 
 RECTANGLE Normal 32 0 256 496
 PIN 0 48  LEFT 36
-PINATTR PinName addra[8:0]
+PINATTR PinName addra[10:0]
 PINATTR Polarity IN
 LINE Wide 0 48 32 48
 PIN 0 144  LEFT 36
@@ -17,7 +17,7 @@ PINATTR PinName clka
 PINATTR Polarity IN
 LINE Normal 0 240 32 240
 PIN 0 272  LEFT 36
-PINATTR PinName addrb[8:0]
+PINATTR PinName addrb[10:0]
 PINATTR Polarity IN
 LINE Wide 0 272 32 272
 PIN 0 304  LEFT 36

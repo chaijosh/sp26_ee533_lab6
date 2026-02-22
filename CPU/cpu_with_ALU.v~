@@ -1,0 +1,342 @@
+`timescale 1ns / 1ps
+/////////////////////////////////////////////////////////////////////////////////
+// Company:
+// Engineer:
+//
+// Create Date:    03:54:24 02/17/2026
+// Design Name:
+// Module Name:    cpu_with_ALU
+// Project Name:
+// Target Devices:
+// Tool versions:
+// Description:
+//
+// Dependencies:
+//
+// Revision:
+// Revision 0.01 - File Create
+// Additional Comments:
+//
+/////////////////////////////////////////////////////////////////////////////////
+
+
+module cpu_with_ALU (CLK,RSTB);
+input CLK,RSTB;
+
+
+// signals -- listed stagewise
+
+// IF stage signals
+reg [8:0] PC_OUT; // Program Counter
+wire [31:0] instr_mem_douta;
+
+// ID stage signals
+reg STALL; 
+
+// Control Unit outputs
+wire w_RegDst, w_ALUSrc, w_MemtoReg, w_RegWrite, w_MemRead, w_MemWrite, w_Branch, w_ALUOp1, w_ALUOp0;
+
+// Pipelined control signals
+reg ID_ALUSrc, ID_MemtoReg, ID_RegWrite, ID_MemRead, ID_MemWrite, ID_Branch;
+reg [1:0] ID_ALUOp;
+
+reg [4:0] ID_Rs,ID_Rt,ID_Rd; // 5-bit source (Rs, Rt) and destination (Rd) register IDs
+reg [3:0] ID_funct; // Function field for R-type instructions
+reg [15:0] ID_imm; // Immediate field
+reg [63:0] reg_file [0:31] ; // register file 32x64
+reg [63:0] ID_XD, ID_Yd; // Data for Rs (ID_XD) and Rt (ID_Yd)
+reg [31:0] ID_INSTR;
+
+// EX stage signals (was EX1)
+wire [63:0] w_forward_A;
+wire [63:0] w_forward_B;
+wire [63:0] w_alu_B_operand;
+wire [63:0] w_alu_result;
+wire w_alu_zero;
+
+reg EX_ALUSrc, EX_MemtoReg, EX_RegWrite, EX_MemRead, EX_MemWrite, EX_Branch;
+reg [1:0] EX_ALUOp;
+
+wire [3:0] EX_ALUOp_final; // 4-bit ALUOp for the alu_64
+wire [63:0] EX_imm_extended; // Sign-extended immediate
+
+reg [4:0] EX_Rs, EX_Rt, EX_Rd; // Pipelined register IDs
+reg [3:0] EX_funct;
+reg [15:0] EX_imm;
+reg [63:0] EX_XD, EX_Yd; // Pipelined operand data
+reg [31:0] EX_INSTR;
+
+// MEM stage signals (was EX2)
+/* reg [63:0] data_memory [0:255]; */ // Replaced by data_mem_64_256 instance
+wire [63:0] data_mem_douta;
+reg MEM_MemtoReg, MEM_RegWrite, MEM_MemRead, MEM_MemWrite, MEM_Branch;
+reg [4:0] MEM_Rd; // Pipelined register IDs
+reg [63:0] MEM_ALU_OUT, MEM_STORE_DATA; // Pipelined data
+reg [31:0] MEM_INSTR;
+
+// WB stage signals
+reg WB_MemtoReg, WB_RegWrite;
+reg [4:0] WB_Rd; // 5-bit write register ID
+reg [63:0] WB_ALU_OUT;
+reg [63:0] WB_RD;
+reg [31:0] WB_INSTR;
+
+instr_mem_dp ICache (
+    // Port A connections for instruction fetch
+    .addra(PC_OUT[8:0]),
+    .clka(CLK),
+    .douta(instr_mem_douta),
+    .ena(1'b1),
+    .addrb(9'b0),
+    .clkb(1'b0),
+    .dinb(32'b0),
+    .enb(1'b0),
+    .web(1'b0),
+    .doutb()
+);
+
+data_mem_64_256 DCache (
+    // Port A connections for data access
+    .addra(MEM_ALU_OUT[7:0]),
+    .clka(CLK),
+    .dina(MEM_STORE_DATA),
+    .douta(data_mem_douta),
+    .ena(MEM_MemRead | MEM_MemWrite),
+    .wea(MEM_MemWrite),
+
+    // Tie off unused Port B
+    .addrb(8'b0),
+    .clkb(1'b0),
+    .dinb(64'b0),
+    .enb(1'b0),
+    .web(1'b0),
+    .doutb()
+);
+
+// Instantiate the new modules
+control_unit main_control (
+    .opcode(instr_mem_douta[31:26]),
+    .RegDst(w_RegDst),
+    .ALUSrc(w_ALUSrc),
+    .MemtoReg(w_MemtoReg),
+    .RegWrite(w_RegWrite),
+    .MemRead(w_MemRead),
+    .MemWrite(w_MemWrite),
+    .Branch(w_Branch),
+    .ALUOp1(w_ALUOp1),
+    .ALUOp0(w_ALUOp0)
+);
+
+alu_control alu_ctrl (
+    .alu_op_in(EX_ALUOp),
+    .funct(EX_funct),
+    .alu_op_out(EX_ALUOp_final)
+);
+
+sign_extend sign_ext(
+    .in(EX_imm),
+    .out(EX_imm_extended)
+);
+
+// Combinational logic for EX stage
+// Forwarding Unit
+assign w_forward_A = ( (EX_Rs == MEM_Rd) && MEM_RegWrite && !MEM_MemRead ) ? MEM_ALU_OUT :
+                     ( (EX_Rs == WB_Rd) && WB_RegWrite ) ? WB_RD :
+                     EX_XD;
+
+assign w_forward_B = ( (EX_Rt == MEM_Rd) && MEM_RegWrite && !MEM_MemRead ) ? MEM_ALU_OUT :
+                     ( (EX_Rt == WB_Rd) && WB_RegWrite ) ? WB_RD :
+                     EX_Yd;
+
+// ALU second operand MUX
+assign w_alu_B_operand = EX_ALUSrc ? EX_imm_extended : w_forward_B;
+
+// ALU Instantiation
+alu_64 theALU (
+    .A(w_forward_A), 
+    .ALUOp(EX_ALUOp_final), 
+    .B(w_alu_B_operand), 
+    .byte_select(8'b0), 
+    .ShiftA(7'b0), 
+    .ShiftB(7'b0), 
+    .O(w_alu_result), 
+    .Overflow(), 
+    .Z(w_alu_zero)
+);
+
+always @(posedge CLK, negedge RSTB)
+
+  begin :
+  
+	if (RSTB == 1'b0)
+	
+	  begin
+	  
+		// IF stage
+		PC_OUT <= 9'h000;
+		IF_INSTR <= 32'h00000000; // Initialize IF_INSTR to a NOP
+		
+		ID_Rs <= 5'b0; 
+		ID_Rt <= 5'b0;
+		ID_Rd <= 5'b0;
+		ID_INSTR <= 32'h00000000; // we could put 32'hXXXXXXXX but, we want to report a NOP in TimeSpace.txt
+		ID_ALUSrc <= 1'b0;
+		ID_MemtoReg <= 1'b0;
+		ID_RegWrite <= 1'b0;
+		ID_MemRead <= 1'b0;
+		ID_MemWrite <= 1'b0;
+		ID_Branch <= 1'b0;
+		ID_ALUOp <= 2'b00;
+		// that a BUBBLE occupies the stage during reset. When control signals
+		// are turned to zero, data can be don't care. See "EX1_XD <= 16'hXXXX;" below.
+		
+		// EX Stage
+		EX_XD <= 64'hXXXXXXXXXXXXXXXX;
+		EX_Yd <= 64'hXXXXXXXXXXXXXXXX;
+		EX_Rs <= 5'b0;
+		EX_Rt <= 5'b0;
+		EX_Rd <= 5'b0;
+		EX_INSTR <= 32'h00000000; // we could put 32'hXXXXXXXX but, we want to report a NOP in TimeSpace.txt
+		EX_ALUSrc <= 1'b0;
+		EX_MemtoReg <= 1'b0;
+		EX_RegWrite <= 1'b0;
+		EX_MemRead <= 1'b0;
+		EX_MemWrite <= 1'b0;
+		EX_Branch <= 1'b0;
+		EX_ALUOp <= 2'b00;
+		
+		// MEM Stage
+		MEM_ALU_OUT <= 64'hXXXXXXXXXXXXXXXX;
+		MEM_STORE_DATA <= 64'hXXXXXXXXXXXXXXXX;
+		MEM_Rd <= 5'b0;
+		MEM_INSTR <= 32'h00000000; // we could put 32'hXXXXXXXX but, we want to report a NOP in TimeSpace.txt
+		MEM_MemtoReg <= 1'b0;
+		MEM_RegWrite <= 1'b0;
+		MEM_MemRead <= 1'b0;
+		MEM_MemWrite <= 1'b0;
+		MEM_Branch <= 1'b0;
+
+		// WB Stage
+		WB_MemtoReg <= 1'b0;
+		WB_ALU_OUT <= 64'hXXXXXXXXXXXXXXXX;
+		WB_INSTR <= 32'h00000000; // we could put 32'hXXXXXXXX but, we want to report a NOP in TimeSpace.txt
+		WB_Rd <= 5'b0;
+		WB_RegWrite <= 1'b0; // to see that a BUBBLE occupies the WB stage initially
+
+	  end	
+	  
+	else // else if posedge CLK
+	
+	  begin
+		// Please notice that we are producing the STALL signal
+		// as an intermediate variable using blocking assignment
+		// in the beginning of the else part of the statement, as
+		// it is needed as an enable for the PC counter and the IF/ID stage register.
+		
+		// Stall for load-use hazard
+		STALL = EX_MemRead & ( (EX_Rd == ID_Rs) | (EX_Rd == ID_Rt) );
+				
+		if (~STALL) // if STALL is *not* true, the PC and the IF/ID registers may be updated.
+		// Can we replace the above line with "if (~STALL_combinational)" ? YES!
+		// But then, the STALL and the STALL_combinational, are quite different in the waveform.
+		// True, but that is an artifact of RTL coding in HDL and the associated waveform display.
+		// Please make sure you understand this point completely.
+			begin
+
+			// PC
+			
+				PC_OUT <= PC_OUT + 1;
+
+			// IF stage logic and IF_ID stage register
+				// IF_ID stage register
+				ID_Rs <= instr_mem_douta[25:21]; 
+				ID_Rt <= instr_mem_douta[20:16];
+				ID_Rd <= w_RegDst ? instr_mem_douta[15:11] : instr_mem_douta[20:16];
+				ID_imm <= instr_mem_douta[15:0];
+				ID_funct <= instr_mem_douta[3:0];
+
+				// Pipeline control signals
+				ID_ALUSrc   <= w_ALUSrc;
+				ID_MemtoReg <= w_MemtoReg;
+				ID_RegWrite <= w_RegWrite;
+				ID_MemRead  <= w_MemRead;
+				ID_MemWrite <= w_MemWrite;
+				ID_Branch   <= w_Branch;
+				ID_ALUOp    <= {w_ALUOp1, w_ALUOp0};
+
+				ID_INSTR <= instr_mem_douta; // carry the instruction for reverse assembling and displaying in Time-Space diagram
+			end
+
+		// The rest of the three stage registers ID/EX, EX/MEM, and MEM/WB are not controlled by the STALL signal.
+// WB stage logic 
+			// Select final result. For lw, it's from memory. For ALU ops, it's from the ALU.
+			WB_RD = WB_MemtoReg ? data_mem_douta : WB_ALU_OUT;
+		
+		// MEM stage logic and MEM_WB stage register
+			// MEM stage logic
+			// Read/Write is handled by the DCache instance.
+
+			// MEM_WB stage register
+			WB_MemtoReg <= MEM_MemtoReg;
+			WB_ALU_OUT <= MEM_ALU_OUT;
+			WB_Rd <= MEM_Rd;
+			WB_RegWrite <= MEM_RegWrite;
+			WB_INSTR <= MEM_INSTR; // carry the instruction for reverse assembling and displaying in Time-Space diagram
+
+		// EX stage logic and EX_MEM stage register
+
+			// EX/MEM stage register update
+			MEM_ALU_OUT <= w_alu_result;
+			MEM_STORE_DATA <= w_forward_B; // Pass Rt data for SW
+			MEM_MemtoReg <= EX_MemtoReg;
+			MEM_RegWrite <= EX_RegWrite;
+			MEM_MemRead  <= EX_MemRead;
+			MEM_MemWrite <= EX_MemWrite;
+			MEM_Branch   <= EX_Branch;
+			MEM_Rd   <= EX_Rd;
+			MEM_INSTR <= EX_INSTR; // carry the instruction for reverse assembling and displaying in Time-Space diagram
+
+			
+		// ID stage logic and ID_EX stage register
+			// ID stage logic
+			if (WB_RegWrite == 1 && WB_Rd != 5'd0)
+				reg_file[WB_Rd] <= WB_RD; // write back to the register file, ignoring writes to R0
+			
+			// Read from register file with forwarding from WB stage. R0 is always 0.
+			if (ID_Rs == 5'd0)
+				ID_XD = 64'd0;
+			else if ((WB_Rd == ID_Rs) && WB_RegWrite == 1)
+				ID_XD = WB_RD; // forwarding from WB stage using blocking assignment
+			else
+				ID_XD = reg_file[ID_Rs]; // register content is read from the register file using blocking assignment
+
+			if (ID_Rt == 5'd0)
+				ID_Yd = 64'd0;
+			else if ((WB_Rd == ID_Rt) && WB_RegWrite == 1)
+				ID_Yd = WB_RD; // forwarding from WB stage using blocking assignment
+			else
+				ID_Yd = reg_file[ID_Rt]; // register content is read from the register file using blocking assignment
+
+			// ID/EX stage register
+			EX_XD <= ID_XD;
+			EX_Yd <= ID_Yd;
+			EX_Rs <= ID_Rs;
+			EX_Rt <= ID_Rt;
+			EX_Rd <= ID_Rd;
+			EX_imm <= ID_imm;
+			EX_funct <= ID_funct;
+			EX_ALUSrc   <= (~STALL) & ID_ALUSrc;
+			EX_MemtoReg <= (~STALL) & ID_MemtoReg;
+			EX_RegWrite <= (~STALL) & ID_RegWrite;
+			EX_MemRead  <= (~STALL) & ID_MemRead;
+			EX_MemWrite <= (~STALL) & ID_MemWrite;
+			EX_Branch   <= (~STALL) & ID_Branch;
+			EX_ALUOp    <= (~STALL) ? ID_ALUOp : 2'b00;
+			if (STALL) // If stalling, inject a bubble (NOP instruction, all zeros) into the EX1 stage for clarity in simulation.
+				EX_INSTR <= 32'b0;
+			else // Otherwise, pass the instruction forward.
+				EX_INSTR <= ID_INSTR; // carry the instruction for reverse assembling and displaying in Time-Space diagram
+	  end
+
+  end
+endmodule

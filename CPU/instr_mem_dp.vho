@@ -31,8 +31,8 @@
 ------------- Begin Cut here for COMPONENT Declaration ------ COMP_TAG
 component instr_mem_dp
 	port (
-	addra: IN std_logic_VECTOR(8 downto 0);
-	addrb: IN std_logic_VECTOR(8 downto 0);
+	addra: IN std_logic_VECTOR(10 downto 0);
+	addrb: IN std_logic_VECTOR(10 downto 0);
 	clka: IN std_logic;
 	clkb: IN std_logic;
 	dinb: IN std_logic_VECTOR(31 downto 0);

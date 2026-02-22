@@ -50,8 +50,8 @@ module instr_mem_dp(
 	web);
 
 
-input [8 : 0] addra;
-input [8 : 0] addrb;
+input [10 : 0] addra;
+input [10 : 0] addrb;
 input clka;
 input clkb;
 input [31 : 0] dinb;
@@ -64,11 +64,11 @@ input web;
 // synthesis translate_off
 
       BLKMEMDP_V6_3 #(
-		.c_addra_width(9),
-		.c_addrb_width(9),
+		.c_addra_width(11),
+		.c_addrb_width(11),
 		.c_default_data("0"),
-		.c_depth_a(512),
-		.c_depth_b(512),
+		.c_depth_a(2048),
+		.c_depth_b(2048),
 		.c_enable_rlocs(0),
 		.c_has_default_data(0),
 		.c_has_dina(0),

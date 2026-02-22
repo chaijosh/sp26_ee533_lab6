@@ -32,8 +32,8 @@
 
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 instr_mem_dp YourInstanceName (
-	.addra(addra), // Bus [8 : 0] 
-	.addrb(addrb), // Bus [8 : 0] 
+	.addra(addra), // Bus [10 : 0] 
+	.addrb(addrb), // Bus [10 : 0] 
 	.clka(clka),
 	.clkb(clkb),
 	.dinb(dinb), // Bus [31 : 0] 

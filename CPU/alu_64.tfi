@@ -1,0 +1,17 @@
+
+
+
+// Instantiate the module
+alu_64 instance_name (
+    .A(A), 
+    .ALUOp(ALUOp), 
+    .B(B), 
+    .byte_select(byte_select), 
+    .ShiftA(ShiftA), 
+    .ShiftB(ShiftB), 
+    .O(O), 
+    .Overflow(Overflow), 
+    .Z(Z)
+    );
+
+

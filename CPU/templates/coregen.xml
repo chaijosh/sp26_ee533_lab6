@@ -9,8 +9,8 @@
 // (in parentheses) to your own signal names.
  
 instr_mem_dp YourInstanceName (
-    .addra(addra), // Bus [8 : 0] 
-    .addrb(addrb), // Bus [8 : 0] 
+    .addra(addra), // Bus [10 : 0] 
+    .addrb(addrb), // Bus [10 : 0] 
     .clka(clka),
     .clkb(clkb),
     .dinb(dinb), // Bus [31 : 0] 
@@ -45,6 +45,29 @@ data_mem_64_256 YourInstanceName (
 
  
 		</Template>
+		<Template label="register_file_CMT" treetype="template">
+ 
+ 
+// The following must be inserted into your Verilog file for this
+// core to be instantiated. Change the instance name and port connections
+// (in parentheses) to your own signal names.
+ 
+register_file_CMT YourInstanceName (
+    .addra(addra), // Bus [6 : 0] 
+    .addrb(addrb), // Bus [6 : 0] 
+    .clka(clka),
+    .clkb(clkb),
+    .dina(dina), // Bus [63 : 0] 
+    .dinb(dinb), // Bus [63 : 0] 
+    .douta(douta), // Bus [63 : 0] 
+    .doutb(doutb), // Bus [63 : 0] 
+    .ena(ena),
+    .enb(enb),
+    .wea(wea),
+    .web(web));
+
+ 
+		</Template>
 	</Folder>
 	<Folder label="VHDL Component Instantiation" treetype="folder">
 		<Template label="instr_mem_dp" treetype="template">
@@ -54,8 +77,8 @@ data_mem_64_256 YourInstanceName (
  
 component instr_mem_dp
     port (
-    addra: IN std_logic_VECTOR(8 downto 0);
-    addrb: IN std_logic_VECTOR(8 downto 0);
+    addra: IN std_logic_VECTOR(10 downto 0);
+    addrb: IN std_logic_VECTOR(10 downto 0);
     clka: IN std_logic;
     clkb: IN std_logic;
     dinb: IN std_logic_VECTOR(31 downto 0);
@@ -116,6 +139,50 @@ end component;
 -- Substitute your own instance name and net names.
  
 your_instance_name : data_mem_64_256
+        port map (
+            addra =&gt; addra,
+            addrb =&gt; addrb,
+            clka =&gt; clka,
+            clkb =&gt; clkb,
+            dina =&gt; dina,
+            dinb =&gt; dinb,
+            douta =&gt; douta,
+            doutb =&gt; doutb,
+            ena =&gt; ena,
+            enb =&gt; enb,
+            wea =&gt; wea,
+            web =&gt; web);
+ 
+		</Template>
+		<Template label="register_file_CMT" treetype="template">
+ 
+ 
+-- The following code must appear in the VHDL architecture header:
+ 
+component register_file_CMT
+    port (
+    addra: IN std_logic_VECTOR(6 downto 0);
+    addrb: IN std_logic_VECTOR(6 downto 0);
+    clka: IN std_logic;
+    clkb: IN std_logic;
+    dina: IN std_logic_VECTOR(63 downto 0);
+    dinb: IN std_logic_VECTOR(63 downto 0);
+    douta: OUT std_logic_VECTOR(63 downto 0);
+    doutb: OUT std_logic_VECTOR(63 downto 0);
+    ena: IN std_logic;
+    enb: IN std_logic;
+    wea: IN std_logic;
+    web: IN std_logic);
+end component;
+
+
+ 
+-------------------------------------------------------------
+ 
+-- The following code must appear in the VHDL architecture body.
+-- Substitute your own instance name and net names.
+ 
+your_instance_name : register_file_CMT
         port map (
             addra =&gt; addra,
             addrb =&gt; addrb,
