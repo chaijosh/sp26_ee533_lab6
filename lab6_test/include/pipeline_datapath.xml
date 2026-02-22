@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nf:module xmlns:nf="http://www.NetFPGA.org/NF2_register_system" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.NetFPGA.org/NF2_register_system NF2_register_system.xsd ">
+	<nf:name>pipeline_datapath</nf:name>
+	<nf:prefix>pipeline_datapath</nf:prefix>
+	<nf:location>udp</nf:location>
+	<nf:description>Registers for Pipeline CPU with Trace Buffer</nf:description>
+	<nf:blocksize>64</nf:blocksize>
+	<nf:registers>
+		<nf:register>
+		  <nf:name>imem_interact</nf:name>
+			<nf:description>Control Register. Bit 0: Force Reset. Bit 1: Enable Trace Capture.</nf:description>
+			<nf:type>generic_software32</nf:type>
+		</nf:register>
+
+		<nf:register>
+		  <nf:name>imem_write</nf:name>
+			<nf:description>Control Register. Bit 0: Force Reset. Bit 1: Enable Trace Capture.</nf:description>
+			<nf:type>generic_software32</nf:type>
+		</nf:register>
+		<nf:register>
+		  <nf:name>imem_rw_address</nf:name>
+			<nf:description>Control Register. Bit 0: Force Reset. Bit 1: Enable Trace Capture.</nf:description>
+			<nf:type>generic_software32</nf:type>
+		</nf:register>
+		<nf:register>
+		  <nf:name>imem_wdata</nf:name>
+			<nf:description>Control Register. Bit 0: Force Reset. Bit 1: Enable Trace Capture.</nf:description>
+			<nf:type>generic_software32</nf:type>
+		</nf:register>
+		<nf:register>
+		  <nf:name>dmem_interact</nf:name>
+			<nf:description>Control Register. Bit 0: Force Reset. Bit 1: Enable Trace Capture.</nf:description>
+			<nf:type>generic_software32</nf:type>
+		</nf:register>
+		<nf:register>
+		  <nf:name>dmem_write</nf:name>
+			<nf:description>Control Register. Bit 0: Force Reset. Bit 1: Enable Trace Capture.</nf:description>
+			<nf:type>generic_software32</nf:type>
+		</nf:register>
+		<nf:register>
+		  <nf:name>dmem_rw_address</nf:name>
+			<nf:description>Control Register. Bit 0: Force Reset. Bit 1: Enable Trace Capture.</nf:description>
+			<nf:type>generic_software32</nf:type>
+		</nf:register>
+		<nf:register>
+		  <nf:name>dmem_wdata_hi</nf:name>
+			<nf:description>Control Register. Bit 0: Force Reset. Bit 1: Enable Trace Capture.</nf:description>
+			<nf:type>generic_software32</nf:type>
+		</nf:register>
+		<nf:register>
+		  <nf:name>dmem_wdata_lo</nf:name>
+			<nf:description>Control Register. Bit 0: Force Reset. Bit 1: Enable Trace Capture.</nf:description>
+			<nf:type>generic_software32</nf:type>
+		</nf:register>
+		<nf:register>
+		  <nf:name>imem_rdata</nf:name>
+			<nf:description>Control Register. Bit 0: Force Reset. Bit 1: Enable Trace Capture.</nf:description>
+			<nf:type>generic_software32</nf:type>
+		</nf:register>
+		<nf:register>
+		  <nf:name>dmem_rdata_lo</nf:name>
+			<nf:description>Control Register. Bit 0: Force Reset. Bit 1: Enable Trace Capture.</nf:description>
+			<nf:type>generic_software32</nf:type>
+		</nf:register>
+		<nf:register>
+		  <nf:name>dmem_rdata_hi</nf:name>
+			<nf:description>Control Register. Bit 0: Force Reset. Bit 1: Enable Trace Capture.</nf:description>
+			<nf:type>generic_software32</nf:type>
+		</nf:register>
+		<nf:register>
+		  <nf:name>hwreg1</nf:name>
+			<nf:description>Control Register. Bit 0: Force Reset. Bit 1: Enable Trace Capture.</nf:description>
+			<nf:type>generic_software32</nf:type>
+		</nf:register>
+
+	</nf:registers>
+</nf:module>
