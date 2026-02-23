@@ -257,6 +257,10 @@ WARNING:PhysDesignRules:1060 - Dangling pins on
    rator/valid.cstr/ramloop[1].ram.r/v2.ram/dp36x36.ram.A>:<RAMB16_RAMB16A>. 
    The block is configured to use input parity pins. There are dangling output
    parity pins.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/B6.A>:<RAMB16_
+   RAMB16A>.  The block is configured to use input parity pins. There are
+   dangling output parity pins.
 WARNING:PhysDesignRules:812 - Dangling pin <DOA19> on
    block:<nf2_core/user_data_path/output_queues/oq_regs/oq_reg_instances/oq_addr
    _lo_reg/ram/Mram_ram.A>:<RAMB16_RAMB16A>.
@@ -335,6 +339,18 @@ WARNING:PhysDesignRules:812 - Dangling pin <DOB30> on
 WARNING:PhysDesignRules:812 - Dangling pin <DOB31> on
    block:<nf2_core/user_data_path/output_queues/oq_regs/oq_reg_instances/oq_addr
    _lo_reg/ram/Mram_ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB28> on
+   block:<nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/B10.B>:<RAMB16
+   _RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB29> on
+   block:<nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/B10.B>:<RAMB16
+   _RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB30> on
+   block:<nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/B10.B>:<RAMB16
+   _RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB31> on
+   block:<nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/B10.B>:<RAMB16
+   _RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOA19> on
    block:<nf2_core/user_data_path/output_queues/oq_regs/oq_reg_instances/oq_rd_a
    ddr_reg/ram/Mram_ram.A>:<RAMB16_RAMB16A>.
@@ -616,5 +632,5 @@ WARNING:PhysDesignRules:812 - Dangling pin <DOB30> on
 WARNING:PhysDesignRules:812 - Dangling pin <DOB31> on
    block:<nf2_core/user_data_path/output_queues/oq_regs/oq_reg_instances/oq_addr
    _hi_reg/ram/Mram_ram.B>:<RAMB16_RAMB16B>.
-DRC detected 0 errors and 178 warnings.  Please see the previously displayed
+DRC detected 0 errors and 183 warnings.  Please see the previously displayed
 individual error or warning messages for more details.

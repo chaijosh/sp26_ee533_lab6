@@ -18,13 +18,13 @@ input CLK,RSTB;
 // Debugging signals
 // =============================
 input [7:0] debug_addr_in;        // Port B Data Addr
-input [31:0] debug_data_in;       // Port B Data In
+input [63:0] debug_data_in;       // Port B Data In
 input debug_data_write_en;        // Port B Data WE
 input debug_enable;               // Debug Mode Enable
 input [31:0] debug_instr_in;      // Port B Instr In
 input debug_instr_write_en;       // Port B Instr WE
 input [8:0] debug_pc;             // Port B Instr Addr
-output [31:0] debug_data_out;     // Port B Data Out
+output [63:0] debug_data_out;     // Port B Data Out
 output [31:0] debug_instr_out;     // Port B Instr Out
 output [8:0] PC_END;         // Port A PC (CPU Execution)
 
@@ -117,16 +117,16 @@ instr_mem_dp ICache (
 data_mem_64_256 DCache (
     .addra(MEM_ALU_OUT[7:0]),
     .clka(CLK),
-    .dina(MEM_STORE_DATA),
+    .dina( {{32{MEM_STORE_DATA[31]}},MEM_STORE_DATA}),
     .douta(data_mem_douta),
     .ena(MEM_MemRead | MEM_MemWrite),
     .wea(MEM_MemWrite),
     .clkb(CLK), 
     .addrb(debug_addr_in[7:0]), 
-    .dinb(debug_data_in[31:0]), 
+    .dinb(debug_data_in[63:0]), 
     .enb(debug_enable), 
     .web(debug_data_write_en), 
-    .doutb(debug_data_out[31:0])
+    .doutb(debug_data_out[63:0])
 );
 
 // =============================

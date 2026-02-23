@@ -4,7 +4,7 @@ Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.02 secs
+Total CPU time to Xst completion: 0.00 secs
  
 --> 
 Reading design: nf2_top.prj
@@ -370,7 +370,7 @@ Analyzing hierarchy for module <device_id_reg> in library <work> with parameters
 	PROJ_DESC = "Reference NIC"
 	PROJ_DESC_BYTE_LEN = "00000000000000000000000001100100"
 	PROJ_DESC_WORD_LEN = "00000000000000000000000000011001"
-	PROJ_DIR = "lab6_test_2"
+	PROJ_DIR = "lab6_test"
 	PROJ_DIR_BYTE_LEN = "00000000000000000000000001000000"
 	PROJ_DIR_WORD_LEN = "00000000000000000000000000010000"
 	PROJ_NAME = "Reference NIC"
@@ -2060,7 +2060,7 @@ Analyzing module <device_id_reg> in library <work>.
 	PROJ_DESC = "Reference NIC"
 	PROJ_DESC_BYTE_LEN = 32'sb00000000000000000000000001100100
 	PROJ_DESC_WORD_LEN = 32'sb00000000000000000000000000011001
-	PROJ_DIR = "lab6_test_2"
+	PROJ_DIR = "lab6_test"
 	PROJ_DIR_BYTE_LEN = 32'sb00000000000000000000000001000000
 	PROJ_DIR_WORD_LEN = 32'sb00000000000000000000000000010000
 	PROJ_NAME = "Reference NIC"
@@ -4562,7 +4562,6 @@ WARNING:Xst:646 - Signal <imem_write<31:1>> is assigned but never used. This unc
 WARNING:Xst:646 - Signal <imem_rw_address<31:9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <imem_interact<31:2>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <dmem_write<31:1>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <dmem_wdata_hi> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <dmem_rw_address<31:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <dmem_interact<31:1>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <PC> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
@@ -5339,7 +5338,6 @@ WARNING:Xst:2404 -  FFs/Latches <rx_pkt_word_cnt<9:9>> (without init value) have
 WARNING:Xst:2404 -  FFs/Latches <rx_pkt_word_cnt<9:9>> (without init value) have a constant value of 0 in block <rx_queue_2>.
 WARNING:Xst:2404 -  FFs/Latches <rx_pkt_word_cnt<9:9>> (without init value) have a constant value of 0 in block <rx_queue_3>.
 WARNING:Xst:2404 -  FFs/Latches <rx_pkt_word_cnt<9:9>> (without init value) have a constant value of 0 in block <rx_queue_4>.
-WARNING:Xst:2404 -  FFs/Latches <dmem_rdata_hi<31:0>> (without init value) have a constant value of 0 in block <pipeline_datapath>.
 WARNING:Xst:2404 -  FFs/Latches <rx_pkt_word_cnt<9:9>> (without init value) have a constant value of 0 in block <cpu_dma_rx_queue_1>.
 WARNING:Xst:2404 -  FFs/Latches <tx_pkt_word_cnt<9:9>> (without init value) have a constant value of 0 in block <cpu_dma_tx_queue>.
 WARNING:Xst:2404 -  FFs/Latches <rx_pkt_word_cnt<9:9>> (without init value) have a constant value of 0 in block <cpu_dma_rx_queue_2>.
@@ -5854,8 +5852,8 @@ Macro Statistics
  10-bit up loadable accumulator                        : 16
  12-bit up loadable accumulator                        : 18
  19-bit up accumulator                                 : 2
-# Registers                                            : 11232
- Flip-Flops                                            : 11232
+# Registers                                            : 11264
+ Flip-Flops                                            : 11264
 # Comparators                                          : 125
  11-bit comparator lessequal                           : 2
  12-bit comparator greatequal                          : 4
@@ -9658,8 +9656,8 @@ Unit <nf2_top> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 9613
- Flip-Flops                                            : 9613
+# Registers                                            : 9645
+ Flip-Flops                                            : 9645
 # Shift Registers                                      : 103
  2-bit shift register                                  : 58
  3-bit shift register                                  : 5
@@ -9697,25 +9695,25 @@ Design Statistics
 # IOs                              : 437
 
 Cell Usage :
-# BELS                             : 18004
+# BELS                             : 17995
 #      BUF                         : 3
 #      GND                         : 124
 #      INV                         : 264
 #      LUT1                        : 283
-#      LUT2                        : 1720
-#      LUT3                        : 4415
-#      LUT4                        : 6659
+#      LUT2                        : 1723
+#      LUT3                        : 4416
+#      LUT4                        : 6645
 #      MUXCY                       : 1667
-#      MUXF5                       : 896
+#      MUXF5                       : 897
 #      MUXF6                       : 208
 #      MUXF7                       : 33
 #      VCC                         : 73
 #      XORCY                       : 1659
-# FlipFlops/Latches                : 9718
+# FlipFlops/Latches                : 9750
 #      FD                          : 2165
 #      FDC                         : 646
 #      FDDRRSE                     : 26
-#      FDE                         : 1492
+#      FDE                         : 1524
 #      FDP                         : 10
 #      FDPE                        : 256
 #      FDR                         : 2272
@@ -9761,10 +9759,10 @@ Device utilization summary:
 
 Selected Device : 2vp50ff1152-7 
 
- Number of Slices:                    10767  out of  23616    45%  
- Number of Slice Flip Flops:           9239  out of  47232    19%  
- Number of 4 input LUTs:              15533  out of  47232    32%  
-    Number used as logic:             13341
+ Number of Slices:                    10781  out of  23616    45%  
+ Number of Slice Flip Flops:           9271  out of  47232    19%  
+ Number of 4 input LUTs:              15523  out of  47232    32%  
+    Number used as logic:             13331
     Number used as Shift registers:      98
     Number used as RAMs:               2094
  Number of IOs:                         437
@@ -9801,30 +9799,30 @@ rgmii_0_rxc                        | RGMII_0_RX_DCM:CLK0    | 167   |
 rgmii_1_rxc                        | RGMII_1_RX_DCM:CLK0    | 167   |
 rgmii_2_rxc                        | RGMII_2_RX_DCM:CLK0    | 167   |
 rgmii_3_rxc                        | RGMII_3_RX_DCM:CLK0    | 167   |
-core_clk                           | CORE_DCM_CLK:CLK0      | 9484  |
+core_clk                           | CORE_DCM_CLK:CLK0      | 9516  |
 cpci_clk                           | IBUFG+BUFGMUX          | 397   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
----------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+-------+
-Control Signal                                                                                                                               | Buffer(FF name)                                                                  | Load  |
----------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+-------+
-reset(reset1:O)                                                                                                                              | NONE(rgmii_2_io/gmii_txd_rising_7)                                               | 180   |
-nf2_core/mac_groups[0].nf2_mac_grp/mac_grp_regs/reset_MAC(nf2_core/mac_groups[0].nf2_mac_grp/mac_grp_regs/reset_MAC_f5:O)                    | NONE(nf2_core/mac_groups[0].nf2_mac_grp/gig_eth_mac/mac_tx/mac_tx_ack_out_reg)   | 158   |
-nf2_core/mac_groups[1].nf2_mac_grp/mac_grp_regs/reset_MAC(nf2_core/mac_groups[1].nf2_mac_grp/mac_grp_regs/reset_MAC_f5:O)                    | NONE(nf2_core/mac_groups[1].nf2_mac_grp/gig_eth_mac/mac_tx/tx_crc_gen/CRC_reg_23)| 158   |
-nf2_core/mac_groups[2].nf2_mac_grp/mac_grp_regs/reset_MAC(nf2_core/mac_groups[2].nf2_mac_grp/mac_grp_regs/reset_MAC_f5:O)                    | NONE(nf2_core/mac_groups[2].nf2_mac_grp/gig_eth_mac/mac_tx/tx_crc_gen/CRC_reg_11)| 158   |
-nf2_core/mac_groups[3].nf2_mac_grp/mac_grp_regs/reset_MAC(nf2_core/mac_groups[3].nf2_mac_grp/mac_grp_regs/reset_MAC_f5:O)                    | NONE(nf2_core/mac_groups[3].nf2_mac_grp/gig_eth_mac/mac_tx/gmii_txer_out_reg)    | 158   |
-nf2_core/user_data_path/pipeline_datapath/my_cpu/RSTB_inv(nf2_core/user_data_path/pipeline_datapath/my_cpu/RSTB_inv1_INV_0:O)                | NONE(nf2_core/user_data_path/pipeline_datapath/my_cpu/ID_Branch_ifNotEqual)      | 30    |
-nf2_core/nf2_dma/nf2_dma_sync/rx_async_fifo/wptr_full/wrst_n_inv(nf2_core/nf2_dma/nf2_dma_sync/rx_async_fifo/wptr_full/wrst_n_inv1_INV_0:O)  | NONE(nf2_core/nf2_dma/nf2_dma_sync/rx_async_fifo/wptr_full/wfull)                | 10    |
-nf2_core/nf2_dma/nf2_dma_sync/tx_async_fifo/wptr_full/wrst_n_inv(nf2_core/nf2_dma/nf2_dma_sync/tx_async_fifo/wptr_full/wrst_n_inv1_INV_0:O)  | NONE(nf2_core/nf2_dma/nf2_dma_sync/tx_async_fifo/wptr_full/wbin_1)               | 10    |
-nf2_core/nf2_dma/nf2_dma_sync/rx_async_fifo/rptr_empty/rrst_n_inv(nf2_core/nf2_dma/nf2_dma_sync/rx_async_fifo/rptr_empty/rrst_n_inv1_INV_0:O)| NONE(nf2_core/nf2_dma/nf2_dma_sync/rx_async_fifo/rptr_empty/rbin_0)              | 9     |
-nf2_core/nf2_dma/nf2_dma_sync/tx_async_fifo/rptr_empty/rrst_n_inv(nf2_core/nf2_dma/nf2_dma_sync/tx_async_fifo/rptr_empty/rrst_n_inv1_INV_0:O)| NONE(nf2_core/nf2_dma/nf2_dma_sync/tx_async_fifo/rptr_empty/rbin_1)              | 9     |
-nf2_core/nf2_dma/nf2_dma_sync/rx_async_fifo/sync_r2w/wrst_n_inv(nf2_core/nf2_dma/nf2_dma_sync/rx_async_fifo/sync_r2w/wrst_n_inv1_INV_0:O)    | NONE(nf2_core/nf2_dma/nf2_dma_sync/rx_async_fifo/sync_r2w/wq2_rptr_1)            | 8     |
-nf2_core/nf2_dma/nf2_dma_sync/rx_async_fifo/sync_w2r/rrst_n_inv(nf2_core/nf2_dma/nf2_dma_sync/rx_async_fifo/sync_w2r/rrst_n_inv1_INV_0:O)    | NONE(nf2_core/nf2_dma/nf2_dma_sync/rx_async_fifo/sync_w2r/rq1_wptr_1)            | 8     |
-nf2_core/nf2_dma/nf2_dma_sync/tx_async_fifo/sync_r2w/wrst_n_inv(nf2_core/nf2_dma/nf2_dma_sync/tx_async_fifo/sync_r2w/wrst_n_inv1_INV_0:O)    | NONE(nf2_core/nf2_dma/nf2_dma_sync/tx_async_fifo/sync_r2w/wq1_rptr_0)            | 8     |
-nf2_core/nf2_dma/nf2_dma_sync/tx_async_fifo/sync_w2r/rrst_n_inv(nf2_core/nf2_dma/nf2_dma_sync/tx_async_fifo/sync_w2r/rrst_n_inv1_INV_0:O)    | NONE(nf2_core/nf2_dma/nf2_dma_sync/tx_async_fifo/sync_w2r/rq2_wptr_1)            | 8     |
----------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+-------+
+---------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                               | Buffer(FF name)                                                                 | Load  |
+---------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------+-------+
+reset(reset1:O)                                                                                                                              | NONE(rgmii_2_io/gmii_txd_rising_2)                                              | 180   |
+nf2_core/mac_groups[0].nf2_mac_grp/mac_grp_regs/reset_MAC(nf2_core/mac_groups[0].nf2_mac_grp/mac_grp_regs/reset_MAC_f5:O)                    | NONE(nf2_core/mac_groups[0].nf2_mac_grp/gig_eth_mac/mac_tx/mac_tx_data_in_reg_4)| 158   |
+nf2_core/mac_groups[1].nf2_mac_grp/mac_grp_regs/reset_MAC(nf2_core/mac_groups[1].nf2_mac_grp/mac_grp_regs/reset_MAC_f5:O)                    | NONE(nf2_core/mac_groups[1].nf2_mac_grp/gig_eth_mac/mac_tx/tx_counter_2)        | 158   |
+nf2_core/mac_groups[2].nf2_mac_grp/mac_grp_regs/reset_MAC(nf2_core/mac_groups[2].nf2_mac_grp/mac_grp_regs/reset_MAC_f5:O)                    | NONE(nf2_core/mac_groups[2].nf2_mac_grp/gig_eth_mac/mac_tx/mac_tx_ack_out_reg)  | 158   |
+nf2_core/mac_groups[3].nf2_mac_grp/mac_grp_regs/reset_MAC(nf2_core/mac_groups[3].nf2_mac_grp/mac_grp_regs/reset_MAC_f5:O)                    | NONE(nf2_core/mac_groups[3].nf2_mac_grp/gig_eth_mac/mac_tx/gmii_txd_out_reg_0)  | 158   |
+nf2_core/user_data_path/pipeline_datapath/my_cpu/RSTB_inv(nf2_core/user_data_path/pipeline_datapath/my_cpu/RSTB_inv1_INV_0:O)                | NONE(nf2_core/user_data_path/pipeline_datapath/my_cpu/PC_OUT_8)                 | 30    |
+nf2_core/nf2_dma/nf2_dma_sync/rx_async_fifo/wptr_full/wrst_n_inv(nf2_core/nf2_dma/nf2_dma_sync/rx_async_fifo/wptr_full/wrst_n_inv1_INV_0:O)  | NONE(nf2_core/nf2_dma/nf2_dma_sync/rx_async_fifo/wptr_full/wbin_0)              | 10    |
+nf2_core/nf2_dma/nf2_dma_sync/tx_async_fifo/wptr_full/wrst_n_inv(nf2_core/nf2_dma/nf2_dma_sync/tx_async_fifo/wptr_full/wrst_n_inv1_INV_0:O)  | NONE(nf2_core/nf2_dma/nf2_dma_sync/tx_async_fifo/wptr_full/wptr_1)              | 10    |
+nf2_core/nf2_dma/nf2_dma_sync/rx_async_fifo/rptr_empty/rrst_n_inv(nf2_core/nf2_dma/nf2_dma_sync/rx_async_fifo/rptr_empty/rrst_n_inv1_INV_0:O)| NONE(nf2_core/nf2_dma/nf2_dma_sync/rx_async_fifo/rptr_empty/rbin_3)             | 9     |
+nf2_core/nf2_dma/nf2_dma_sync/tx_async_fifo/rptr_empty/rrst_n_inv(nf2_core/nf2_dma/nf2_dma_sync/tx_async_fifo/rptr_empty/rrst_n_inv1_INV_0:O)| NONE(nf2_core/nf2_dma/nf2_dma_sync/tx_async_fifo/rptr_empty/rptr_2)             | 9     |
+nf2_core/nf2_dma/nf2_dma_sync/rx_async_fifo/sync_r2w/wrst_n_inv(nf2_core/nf2_dma/nf2_dma_sync/rx_async_fifo/sync_r2w/wrst_n_inv1_INV_0:O)    | NONE(nf2_core/nf2_dma/nf2_dma_sync/rx_async_fifo/sync_r2w/wq1_rptr_2)           | 8     |
+nf2_core/nf2_dma/nf2_dma_sync/rx_async_fifo/sync_w2r/rrst_n_inv(nf2_core/nf2_dma/nf2_dma_sync/rx_async_fifo/sync_w2r/rrst_n_inv1_INV_0:O)    | NONE(nf2_core/nf2_dma/nf2_dma_sync/rx_async_fifo/sync_w2r/rq1_wptr_3)           | 8     |
+nf2_core/nf2_dma/nf2_dma_sync/tx_async_fifo/sync_r2w/wrst_n_inv(nf2_core/nf2_dma/nf2_dma_sync/tx_async_fifo/sync_r2w/wrst_n_inv1_INV_0:O)    | NONE(nf2_core/nf2_dma/nf2_dma_sync/tx_async_fifo/sync_r2w/wq1_rptr_0)           | 8     |
+nf2_core/nf2_dma/nf2_dma_sync/tx_async_fifo/sync_w2r/rrst_n_inv(nf2_core/nf2_dma/nf2_dma_sync/tx_async_fifo/sync_w2r/rrst_n_inv1_INV_0:O)    | NONE(nf2_core/nf2_dma/nf2_dma_sync/tx_async_fifo/sync_w2r/rq2_wptr_0)           | 8     |
+---------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
@@ -9842,7 +9840,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'gtx_clk'
   Clock period: 6.831ns (frequency: 146.393MHz)
-  Total number of paths / destination ports: 38648 / 708
+  Total number of paths / destination ports: 38645 / 708
 -------------------------------------------------------------------------
 Delay:               6.831ns (Levels of Logic = 18)
   Source:            nf2_core/mac_groups[3].nf2_mac_grp/gig_eth_mac/mac_tx/conf_tx_no_gen_crc_reg (FF)
@@ -10037,7 +10035,7 @@ Delay:               7.145ns (Levels of Logic = 18)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'core_clk'
   Clock period: 8.416ns (frequency: 118.827MHz)
-  Total number of paths / destination ports: 855060 / 21136
+  Total number of paths / destination ports: 855019 / 21168
 -------------------------------------------------------------------------
 Delay:               8.416ns (Levels of Logic = 36)
   Source:            nf2_core/user_data_path/pipeline_datapath/my_cpu/EX_imm_1 (FF)
@@ -10245,7 +10243,7 @@ Offset:              3.312ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'core_clk'
-  Total number of paths / destination ports: 75981 / 9145
+  Total number of paths / destination ports: 76013 / 9177
 -------------------------------------------------------------------------
 Offset:              9.670ns (Levels of Logic = 40)
   Source:            nf2_reset (PAD)
@@ -10324,7 +10322,7 @@ Offset:              2.176ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'core_clk'
-  Total number of paths / destination ports: 2135 / 1087
+  Total number of paths / destination ports: 2199 / 1151
 -------------------------------------------------------------------------
 Offset:              4.276ns (Levels of Logic = 6)
   Source:            nf2_core/nf2_reg_grp_u/cpu_timeout_cnt_dn_3 (FF)
@@ -10515,15 +10513,15 @@ Delay:               4.773ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 47.00 secs
-Total CPU time to Xst completion: 43.63 secs
+Total REAL time to Xst completion: 43.00 secs
+Total CPU time to Xst completion: 39.89 secs
  
 --> 
 
 
-Total memory usage is 987980 kilobytes
+Total memory usage is 987204 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 3578 (   0 filtered)
+Number of warnings : 3571 (   0 filtered)
 Number of infos    :  249 (   0 filtered)
 

@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map K.39 on Sat Feb 21 22:57:59 2026
+// Written by: Map K.39 on Sun Feb 22 01:12:06 2026
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -6458,38 +6458,6 @@ TIMEGRP cpci_clk = BEL "nf2_core/user_data_path/udp_reg_master/core_reg_ack"
         "nf2_core/user_data_path/pipeline_datapath/hwreg1_28" BEL
         "nf2_core/user_data_path/pipeline_datapath/hwreg1_29" BEL
         "nf2_core/user_data_path/pipeline_datapath/hwreg1_31" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_0" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_1" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_2" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_3" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_4" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_5" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_6" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_7" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_8" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_9" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_10" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_11" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_12" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_13" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_14" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_15" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_16" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_17" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_18" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_19" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_20" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_21" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_22" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_23" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_24" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_25" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_26" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_27" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_28" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_29" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_30" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_31" BEL
         "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_lo_0" BEL
         "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_lo_1" BEL
         "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_lo_2" BEL
@@ -6522,6 +6490,70 @@ TIMEGRP cpci_clk = BEL "nf2_core/user_data_path/udp_reg_master/core_reg_ack"
         "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_lo_29" BEL
         "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_lo_30" BEL
         "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_lo_31" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_0" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_1" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_2" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_3" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_4" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_5" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_6" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_7" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_8" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_9" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_10" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_11" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_12" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_13" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_14" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_15" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_16" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_17" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_18" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_19" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_20" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_21" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_22" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_23" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_24" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_25" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_26" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_27" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_28" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_29" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_30" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_31" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_0" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_1" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_2" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_3" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_4" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_5" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_6" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_7" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_8" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_9" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_10" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_11" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_12" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_13" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_14" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_15" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_16" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_17" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_18" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_19" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_20" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_21" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_22" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_23" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_24" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_25" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_26" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_27" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_28" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_29" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_30" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_31" BEL
         "nf2_core/user_data_path/pipeline_datapath/my_cpu/ID_Rd_0" BEL
         "nf2_core/user_data_path/pipeline_datapath/my_cpu/ID_Rd_1" BEL
         "nf2_core/user_data_path/pipeline_datapath/my_cpu/ID_Rd_2" BEL
@@ -23581,6 +23613,12 @@ PIN nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/B6.A_pins<15> =
 PIN nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/B6.B_pins<15> =
         BEL "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/B6.B"
         PINNAME CLKB;
+PIN nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/B10.A_pins<15> =
+        BEL "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/B10.A"
+        PINNAME CLKA;
+PIN nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/B10.B_pins<15> =
+        BEL "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/B10.B"
+        PINNAME CLKB;
 PIN nf2_core/user_data_path/pipeline_datapath/my_cpu/Mram_reg_file.A_pins<15>
         = BEL
         "nf2_core/user_data_path/pipeline_datapath/my_cpu/Mram_reg_file.A"
@@ -26330,38 +26368,6 @@ TIMEGRP core_clk_int = BEL
         "nf2_core/user_data_path/pipeline_datapath/hwreg1_28" BEL
         "nf2_core/user_data_path/pipeline_datapath/hwreg1_29" BEL
         "nf2_core/user_data_path/pipeline_datapath/hwreg1_31" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_0" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_1" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_2" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_3" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_4" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_5" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_6" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_7" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_8" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_9" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_10" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_11" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_12" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_13" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_14" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_15" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_16" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_17" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_18" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_19" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_20" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_21" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_22" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_23" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_24" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_25" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_26" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_27" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_28" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_29" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_30" BEL
-        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_31" BEL
         "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_lo_0" BEL
         "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_lo_1" BEL
         "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_lo_2" BEL
@@ -26394,6 +26400,70 @@ TIMEGRP core_clk_int = BEL
         "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_lo_29" BEL
         "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_lo_30" BEL
         "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_lo_31" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_0" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_1" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_2" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_3" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_4" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_5" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_6" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_7" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_8" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_9" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_10" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_11" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_12" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_13" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_14" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_15" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_16" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_17" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_18" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_19" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_20" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_21" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_22" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_23" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_24" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_25" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_26" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_27" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_28" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_29" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_30" BEL
+        "nf2_core/user_data_path/pipeline_datapath/imem_rdata_31" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_0" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_1" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_2" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_3" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_4" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_5" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_6" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_7" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_8" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_9" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_10" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_11" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_12" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_13" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_14" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_15" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_16" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_17" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_18" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_19" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_20" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_21" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_22" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_23" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_24" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_25" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_26" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_27" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_28" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_29" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_30" BEL
+        "nf2_core/user_data_path/pipeline_datapath/dmem_rdata_hi_31" BEL
         "nf2_core/user_data_path/pipeline_datapath/my_cpu/ID_Rd_0" BEL
         "nf2_core/user_data_path/pipeline_datapath/my_cpu/ID_Rd_1" BEL
         "nf2_core/user_data_path/pipeline_datapath/my_cpu/ID_Rd_2" BEL
@@ -26521,6 +26591,10 @@ TIMEGRP core_clk_int = BEL
         "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/B6.A_pins<15>"
         PIN
         "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/B6.B_pins<15>"
+        PIN
+        "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/B10.A_pins<15>"
+        PIN
+        "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/B10.B_pins<15>"
         PIN
         "nf2_core/user_data_path/pipeline_datapath/my_cpu/Mram_reg_file.A_pins<15>"
         PIN

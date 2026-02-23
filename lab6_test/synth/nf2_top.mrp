@@ -4,28 +4,28 @@ Xilinx Mapping Report File for Design 'nf2_top'
 Design Information
 ------------------
 Command Line   : map -intstyle ise -timing -xe n -detail -ol high -cm speed
--register_duplication -ignore_keep_hierarchy -pr b -k 4 -c 100 -tx off
-nf2_top.ngd 
+-register_duplication -smartguide smartguide.ncd -ignore_keep_hierarchy -pr b -k
+4 -c 100 -tx off nf2_top.ngd 
 Target Device  : xc2vp50
 Target Package : ff1152
 Target Speed   : -7
 Mapper Version : virtex2p -- $Revision: 1.46.12.2 $
-Mapped Date    : Sat Feb 21 22:57:14 2026
+Mapped Date    : Sun Feb 22 00:51:12 2026
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings: 2146
+Number of warnings: 2119
 Logic Utilization:
-  Number of Slice Flip Flops:        13,006 out of  47,232   27%
-  Number of 4 input LUTs:            17,014 out of  47,232   36%
+  Number of Slice Flip Flops:        13,038 out of  47,232   27%
+  Number of 4 input LUTs:            17,001 out of  47,232   35%
 Logic Distribution:
-  Number of occupied Slices:         12,668 out of  23,616   53%
-    Number of Slices containing only related logic:  12,668 out of  12,668 100%
-    Number of Slices containing unrelated logic:          0 out of  12,668   0%
+  Number of occupied Slices:         12,683 out of  23,616   53%
+    Number of Slices containing only related logic:  12,683 out of  12,683 100%
+    Number of Slices containing unrelated logic:          0 out of  12,683   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:      18,205 out of  47,232   38%
-    Number used as logic:            14,822
+  Total Number of 4 input LUTs:      18,192 out of  47,232   38%
+    Number used as logic:            14,809
     Number used as a route-thru:      1,191
     Number used for Dual Port RAMs:   1,678
       (Two LUTs used per Dual Port RAM)
@@ -35,13 +35,13 @@ Logic Distribution:
     Number used as Shift registers:      98
   Number of bonded IOBs:                356 out of     692   51%
     IOB Flip Flops:                     651
-  Number of RAMB16s:                     93 out of     232   40%
+  Number of RAMB16s:                     94 out of     232   40%
   Number of BUFGMUXs:                     8 out of      16   50%
   Number of DCMs:                         6 out of       8   75%
 
-Peak Memory Usage:  1567 MB
-Total REAL time to MAP completion:  45 secs 
-Total CPU time to MAP completion:   45 secs 
+Peak Memory Usage:  1616 MB
+Total REAL time to MAP completion:  20 mins 55 secs 
+Total CPU time to MAP completion:   44 secs 
 
 Table of Contents
 -----------------
@@ -2966,102 +2966,6 @@ WARNING:LIT:243 - Logical network
    nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/douta<32> has no
    load.
 WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<63> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<62> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<61> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<60> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<59> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<58> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<57> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<56> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<55> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<54> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<53> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<52> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<51> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<50> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<49> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<48> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<47> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<46> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<45> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<44> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<43> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<42> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<41> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<40> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<39> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<38> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<37> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<36> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<35> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<34> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<33> has no
-   load.
-WARNING:LIT:243 - Logical network
-   nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<32> has no
-   load.
-WARNING:LIT:243 - Logical network
    nf2_core/user_data_path/output_queues/remove_pkt/output_fifo64.output_fifos[0
    ].gmac_tx_fifo/full has no load.
 WARNING:LIT:243 - Logical network
@@ -5483,6 +5387,10 @@ WARNING:PhysDesignRules:1060 - Dangling pins on
    rator/valid.cstr/ramloop[1].ram.r/v2.ram/dp36x36.ram.A>:<RAMB16_RAMB16A>. 
    The block is configured to use input parity pins. There are dangling output
    parity pins.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/B6.A>:<RAMB16_
+   RAMB16A>.  The block is configured to use input parity pins. There are
+   dangling output parity pins.
 WARNING:PhysDesignRules:812 - Dangling pin <DOA19> on
    block:<nf2_core/user_data_path/output_queues/oq_regs/oq_reg_instances/oq_addr
    _lo_reg/ram/Mram_ram.A>:<RAMB16_RAMB16A>.
@@ -5561,6 +5469,18 @@ WARNING:PhysDesignRules:812 - Dangling pin <DOB30> on
 WARNING:PhysDesignRules:812 - Dangling pin <DOB31> on
    block:<nf2_core/user_data_path/output_queues/oq_regs/oq_reg_instances/oq_addr
    _lo_reg/ram/Mram_ram.B>:<RAMB16_RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB28> on
+   block:<nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/B10.B>:<RAMB16
+   _RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB29> on
+   block:<nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/B10.B>:<RAMB16
+   _RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB30> on
+   block:<nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/B10.B>:<RAMB16
+   _RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB31> on
+   block:<nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/B10.B>:<RAMB16
+   _RAMB16B>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOA19> on
    block:<nf2_core/user_data_path/output_queues/oq_regs/oq_reg_instances/oq_rd_a
    ddr_reg/ram/Mram_ram.A>:<RAMB16_RAMB16A>.
@@ -5849,6 +5769,9 @@ INFO:Map:110 - output buffer 'phy_mdc_OBUF' driving design level port 'phy_mdc'
    is being pushed into module 'nf2_core/nf2_mdio' to enable I/O register usage.
    The buffer has been renamed as 'nf2_core/nf2_mdio/phy_mdc_OBUF'.
 INFO:MapLib:562 - No environment variables are currently set.
+INFO:MapLib:980 - The following NGM file is used during SmartGuide:
+   "nf2_top.ngm". The NGM file contains information on how the guide file was
+   originally mapped. It is required for the best SmartGuide results.
 INFO:MapLib:533 - The following XORCY(s) is/are demoted to LUTs because there is
    no MUXCY associated with them. Therefore, we cannot recognize the standard
    carry chain structure (5 of 262 are listed):
@@ -5877,10 +5800,6 @@ INFO:MapLib:533 - The following XORCY(s) is/are demoted to LUTs because there is
    bytes_removed_reg/Madd_curr_plus_new_b_xor(12)" (output
    signal=nf2_core/user_data_path/output_queues/oq_regs/oq_reg_instances/num_ove
    rhead_bytes_removed_reg/curr_plus_new_b(12))
-INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
-   0.000 to 85.000 Celsius)
-INFO:Pack:1720 - Initializing voltage to 1.400 Volts. (default - Range: 1.400 to
-   1.600 Volts)
 INFO:Timing:3377 - Intersecting Constraints found and resolved.  For more
    information see the TSI report.
 INFO:Pack:1650 - Map created a placed design.
@@ -5889,8 +5808,8 @@ Section 4 - Removed Logic Summary
 ---------------------------------
  420 block(s) removed
  311 block(s) optimized away
- 464 signal(s) removed
-1202 Block(s) redundant
+ 433 signal(s) removed
+1184 Block(s) redundant
 
 Section 5 - Removed Logic
 -------------------------
@@ -7343,70 +7262,6 @@ The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/douta<33>"
 is sourceless and has been removed.
 The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/douta<32>"
 is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<63>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<62>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<61>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<60>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<59>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<58>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<57>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<56>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<55>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<54>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<53>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<52>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<51>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<50>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<49>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<48>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<47>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<46>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<45>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<44>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<43>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<42>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<41>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<40>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<39>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<38>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<37>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<36>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<35>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<34>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<33>"
-is sourceless and has been removed.
-The signal "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/doutb<32>"
-is sourceless and has been removed.
 The signal
 "nf2_core/user_data_path/output_queues/remove_pkt/output_fifo64.output_fifos[0].
 gmac_tx_fifo/full" is sourceless and has been removed.
@@ -8372,6 +8227,9 @@ _mux000088" (ROM) removed.
 The signal
 "nf2_core/cpci_bus/pci2net_fifo/BU2/U0/grf.rf/gl0.wr/gwas.wsts/ram_almost_full_i
 _mux000026" is sourceless and has been removed.
+The signal
+"nf2_core/cpci_bus/pci2net_fifo/BU2/U0/grf.rf/gl0.wr/gwas.wsts/ram_almost_full_i
+_mux000051" is sourceless and has been removed.
 The signal "nf2_core/cpci_bus/pci2net_fifo/BU2/N29" is sourceless and has been
 removed.
  Sourceless block
@@ -8380,6 +8238,9 @@ _mux000051" (ROM) removed.
   The signal
 "nf2_core/cpci_bus/pci2net_fifo/BU2/U0/grf.rf/gl0.wr/gwas.wsts/ram_almost_full_i
 _mux000051/O" is sourceless and has been removed.
+   Sourceless block
+"nf2_core/cpci_bus/pci2net_fifo/BU2/U0/grf.rf/gl0.wr/gwas.wsts/ram_almost_full_i
+_mux000051/LUT4_L_BUF" (BUF) removed.
 The signal "nf2_core/cpci_bus/net2pci_fifo/full" is sourceless and has been
 removed.
 
@@ -8736,8 +8597,6 @@ gmac_tx_fifo/GND" (ZERO) removed.
 Unused block
 "nf2_core/user_data_path/output_queues/remove_pkt/output_fifo64.output_fifos[7].
 gmac_tx_fifo/VCC" (ONE) removed.
-Unused block "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/B10" ()
-removed.
 Unused block "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/VCC" (ONE)
 removed.
 Unused block "nf2_core/user_data_path/pipeline_datapath/my_cpu/ICache/VCC" (ONE)
@@ -9285,9 +9144,6 @@ Madd_curr_plus_new_a_cy(0)
 Redundant Block(s):
 TYPE 		BLOCK
 LOCALBUF
-		nf2_core/cpci_bus/pci2net_fifo/BU2/U0/grf.rf/gl0.wr/gwas.wsts/ram_almost_full_
-i_mux000051/LUT4_L_BUF
-LOCALBUF
 		nf2_core/user_data_path/output_queues/remove_pkt/output_fifo64.output_fifos[0]
 .gmac_tx_fifo/BU2/U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i_or0000_SW0/LUT2_L_BU
 F
@@ -9427,6 +9283,19 @@ r0000118/LUT4_L_BUF
 LOCALBUF
 		nf2_core/cpci_bus/net2pci_fifo/BU2/U0/grf.rf/gl0.wr/gwas.wsts/ram_full_i_or000
 070_SW0/LUT3_L_BUF
+INV 		nf2_core/user_data_path/output_port_lookup/in_rdy1_INV_0
+LOCALBUF
+		nf2_core/cpu_queues[3].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64.rx_fifo/BU
+2/U0/grf.rf/gl0.wr/gwas.gpf.wrpf/prog_full_i_mux000327_SW0/LUT3_L_BUF
+LOCALBUF
+		nf2_core/cpu_queues[2].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64.rx_fifo/BU
+2/U0/grf.rf/gl0.wr/gwas.gpf.wrpf/prog_full_i_mux000327_SW0/LUT3_L_BUF
+LOCALBUF
+		nf2_core/cpu_queues[1].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64.rx_fifo/BU
+2/U0/grf.rf/gl0.wr/gwas.gpf.wrpf/prog_full_i_mux000327_SW0/LUT3_L_BUF
+LOCALBUF
+		nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64.rx_fifo/BU
+2/U0/grf.rf/gl0.wr/gwas.gpf.wrpf/prog_full_i_mux000327_SW0/LUT3_L_BUF
 LUT1 		nf2_core/user_data_path/input_arbiter/in_arb_regs/Mcount_eop_cnt_cy(1)_rt
 LUT1 		nf2_core/user_data_path/input_arbiter/in_arb_regs/Mcount_eop_cnt_cy(2)_rt
 LUT1 		nf2_core/user_data_path/input_arbiter/in_arb_regs/Mcount_eop_cnt_cy(3)_rt
@@ -9569,7 +9438,6 @@ NV_0
 INV
 		nf2_core/user_data_path/output_port_lookup/input_fifo/Mcount_depth_xor(0)11_IN
 V_0
-INV 		nf2_core/user_data_path/output_port_lookup/in_rdy1_INV_0
 LUT1 		nf2_core/user_data_path/pipeline_datapath/my_cpu/Mcount_PC_OUT_cy(1)_rt
 LUT1 		nf2_core/user_data_path/pipeline_datapath/my_cpu/Mcount_PC_OUT_cy(2)_rt
 LUT1 		nf2_core/user_data_path/pipeline_datapath/my_cpu/Mcount_PC_OUT_cy(3)_rt
@@ -10151,9 +10019,6 @@ _rd_ptr_xor(0)11_INV_0
 INV
 		nf2_core/user_data_path/output_queues/oq_header_parser/dst_oq_fifo/fifo/Mcount
 _depth_xor(0)11_INV_0
-INV
-		nf2_core/user_data_path/output_queues/oq_header_parser/header_parser_rdy1_INV_
-0
 INV 		nf2_core/user_data_path/output_queues/oq_header_parser/dst_oq_avail1_INV_0
 INV
 		nf2_core/user_data_path/output_queues/oq_regs/oq_regs_ctrl/Mcount_reg_cnt_xor(
@@ -10178,8 +10043,6 @@ eg/wr_update_b_inv1_INV_0
 INV
 		nf2_core/user_data_path/output_queues/oq_regs/oq_reg_instances/num_words_left_
 reg/wr_update_a_inv1_INV_0
-INV
-		nf2_core/cpu_queues[3].cpu_dma_queue_i/.cpu_dma_queue_regs/tx_queue_en1_INV_0
 INV
 		nf2_core/cpu_queues[3].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_queue_en1_INV_0
 LUT1
@@ -10317,8 +10180,6 @@ INV
 		nf2_core/cpu_queues[3].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_q_dma_wr_inv1_INV_
 0
 INV
-		nf2_core/cpu_queues[2].cpu_dma_queue_i/.cpu_dma_queue_regs/tx_queue_en1_INV_0
-INV
 		nf2_core/cpu_queues[2].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_queue_en1_INV_0
 LUT1
 		nf2_core/cpu_queues[2].cpu_dma_queue_i/cpu_dma_tx_queue/cpu_fifos64.tx_fifo/BU
@@ -10454,8 +10315,6 @@ INV 		nf2_core/cpu_queues[2].cpu_dma_queue_i/cpu_dma_rx_queue/reset_inv1_INV_0
 INV
 		nf2_core/cpu_queues[2].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_q_dma_wr_inv1_INV_
 0
-INV
-		nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/tx_queue_en1_INV_0
 INV
 		nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_queue_en1_INV_0
 LUT1
@@ -10593,8 +10452,6 @@ INV
 		nf2_core/cpu_queues[1].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_q_dma_wr_inv1_INV_
 0
 INV
-		nf2_core/cpu_queues[0].cpu_dma_queue_i/.cpu_dma_queue_regs/tx_queue_en1_INV_0
-INV
 		nf2_core/cpu_queues[0].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_queue_en1_INV_0
 LUT1
 		nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64.rx_fifo/BU
@@ -10731,10 +10588,6 @@ INV
 		nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_tx_queue/cpu_q_dma_rd_inv1_INV_
 0
 INV 		nf2_core/mac_groups[3].nf2_mac_grp/mac_grp_regs/tx_queue_en1_INV_0
-INV 		nf2_core/mac_groups[3].nf2_mac_grp/mac_grp_regs/tx_mac_en1_INV_0
-INV 		nf2_core/mac_groups[3].nf2_mac_grp/mac_grp_regs/rx_mac_en1_INV_0
-INV 		nf2_core/mac_groups[3].nf2_mac_grp/mac_grp_regs/enable_jumbo_tx1_INV_0
-INV 		nf2_core/mac_groups[3].nf2_mac_grp/mac_grp_regs/enable_jumbo_rx1_INV_0
 INV 		nf2_core/mac_groups[3].nf2_mac_grp/mac_grp_regs/rx_queue_en1_INV_0
 LUT1
 		nf2_core/mac_groups[3].nf2_mac_grp/tx_queue/tx_fifo_64.gmac_tx_fifo/BU2/U0/grf
@@ -11210,10 +11063,6 @@ LUT1
 		nf2_core/mac_groups[3].nf2_mac_grp/gig_eth_mac/mac_rx/Madd_rx_counter_next_add
 sub0000_xor(13)_rt
 INV 		nf2_core/mac_groups[2].nf2_mac_grp/mac_grp_regs/tx_queue_en1_INV_0
-INV 		nf2_core/mac_groups[2].nf2_mac_grp/mac_grp_regs/tx_mac_en1_INV_0
-INV 		nf2_core/mac_groups[2].nf2_mac_grp/mac_grp_regs/rx_mac_en1_INV_0
-INV 		nf2_core/mac_groups[2].nf2_mac_grp/mac_grp_regs/enable_jumbo_tx1_INV_0
-INV 		nf2_core/mac_groups[2].nf2_mac_grp/mac_grp_regs/enable_jumbo_rx1_INV_0
 INV 		nf2_core/mac_groups[2].nf2_mac_grp/mac_grp_regs/rx_queue_en1_INV_0
 LUT1
 		nf2_core/mac_groups[2].nf2_mac_grp/tx_queue/tx_fifo_64.gmac_tx_fifo/BU2/U0/grf
@@ -11689,10 +11538,6 @@ LUT1
 		nf2_core/mac_groups[2].nf2_mac_grp/gig_eth_mac/mac_rx/Madd_rx_counter_next_add
 sub0000_xor(13)_rt
 INV 		nf2_core/mac_groups[1].nf2_mac_grp/mac_grp_regs/tx_queue_en1_INV_0
-INV 		nf2_core/mac_groups[1].nf2_mac_grp/mac_grp_regs/tx_mac_en1_INV_0
-INV 		nf2_core/mac_groups[1].nf2_mac_grp/mac_grp_regs/rx_mac_en1_INV_0
-INV 		nf2_core/mac_groups[1].nf2_mac_grp/mac_grp_regs/enable_jumbo_tx1_INV_0
-INV 		nf2_core/mac_groups[1].nf2_mac_grp/mac_grp_regs/enable_jumbo_rx1_INV_0
 INV 		nf2_core/mac_groups[1].nf2_mac_grp/mac_grp_regs/rx_queue_en1_INV_0
 LUT1
 		nf2_core/mac_groups[1].nf2_mac_grp/tx_queue/tx_fifo_64.gmac_tx_fifo/BU2/U0/grf
@@ -12168,10 +12013,6 @@ LUT1
 		nf2_core/mac_groups[1].nf2_mac_grp/gig_eth_mac/mac_rx/Madd_rx_counter_next_add
 sub0000_xor(13)_rt
 INV 		nf2_core/mac_groups[0].nf2_mac_grp/mac_grp_regs/tx_queue_en1_INV_0
-INV 		nf2_core/mac_groups[0].nf2_mac_grp/mac_grp_regs/tx_mac_en1_INV_0
-INV 		nf2_core/mac_groups[0].nf2_mac_grp/mac_grp_regs/rx_mac_en1_INV_0
-INV 		nf2_core/mac_groups[0].nf2_mac_grp/mac_grp_regs/enable_jumbo_tx1_INV_0
-INV 		nf2_core/mac_groups[0].nf2_mac_grp/mac_grp_regs/enable_jumbo_rx1_INV_0
 INV 		nf2_core/mac_groups[0].nf2_mac_grp/mac_grp_regs/rx_queue_en1_INV_0
 LUT1
 		nf2_core/mac_groups[0].nf2_mac_grp/rx_queue/rx_fifo_64.gmac_rx_fifo/BU2/U0/gen
@@ -13443,7 +13284,27 @@ Section 7 - RPMs
 
 Section 8 - Guide Report
 ------------------------
-Guide not run on this design.
+
+Sun Feb 22 01:12:03 2026
+
+  Estimated SmartGuide Results
+  ----------------------------
+  This section describes the guide results after placement. Re-implemented 
+  components are components that were guided, but moved in order to satisfy
+  timing requirements.
+
+    Estimated Percentage of guided Components                 |  91.3%
+    Estimated Percentage of re-implemented Components         |   6.3%
+    Estimated Percentage of new/changed Components            |   2.4%
+    Estimated Percentage of fully guided Nets                 |  84.2%
+    Estimated Percentage of partially guided or unrouted Nets |  15.8%
+
+  A detailed SmartGuide report (.GRF) can be generated during PAR by
+  specifying the [-smartguide <guidefile[.ncd]>] switch on the PAR
+  command line. The GRF file contains all components and nets that were
+  not guided. A final summary report is always generated and is available
+  in the PAR report file regardless of the PAR -smartguide switch.
+
 
 Section 9 - Area Group and Partition Summary
 --------------------------------------------
@@ -21247,6 +21108,89 @@ INIT_A = 000000000
 SRVAL_A = 000000000
 PORTB_ATTR:512X36
 WRITEMODEB:WRITE_FIRST
+INIT_B = 000000000
+SRVAL_B = 000000000
+
+
+RAMB16 "nf2_core/user_data_path/pipeline_datapath/my_cpu/DCache/B10":
+INITP_00 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_01 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_02 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_03 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_04 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_05 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_06 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_07 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_00 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_01 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_02 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_03 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_04 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_05 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_06 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_07 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_08 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_09 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_0f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_10 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_11 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_12 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_13 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_14 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_15 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_16 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_17 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_18 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_19 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_1f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_20 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_21 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_22 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_23 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_24 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_25 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_26 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_27 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_28 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_29 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_2f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_30 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_31 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_32 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_33 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_34 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_35 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_36 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_37 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_38 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_39 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3a = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3b = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3c = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3d = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3e = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_3f = 0000000000000000000000000000000000000000000000000000000000000000
+PORTA_ATTR:512X36
+WRITEMODEA:READ_FIRST
+INIT_A = 000000000
+SRVAL_A = 000000000
+PORTB_ATTR:512X36
+WRITEMODEB:READ_FIRST
 INIT_B = 000000000
 SRVAL_B = 000000000
 
